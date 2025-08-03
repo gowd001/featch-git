@@ -1,0 +1,51 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(defaultValue: 'testing', name: 'Name')
+        booleanParam(name: 'value', defaultValue: false)
+    }
+
+    stages {
+        stage('Print Info') {
+            steps {
+                echo "Build Number: ${env.BUILD_NUMBER}"
+                bat 'echo Job Name: %JOB_NAME%'
+            }
+        }
+
+        stage('Values') {
+            steps {
+                echo "Build Number: ${env.BUILD_NUMBER}"
+                bat 'echo Name: %Name%'
+                bat 'echo Value: %value%'
+            }
+        }
+
+        stage('If-Else') {
+            steps {
+                script {
+                    if (params.value == true) {
+                        echo "True statement"
+                    } else {
+                        echo "False statement"
+                    }
+                }
+            }
+        }
+
+        stage('Function with Closure') {
+            steps {
+                script {
+                    // Define a closure instead of a method
+                    def abc = { val ->
+                        echo "Value from closure: ${val}"
+                    }
+
+                    // Call the closure
+                    abc(env.WORKSPACE)
+                }
+            }
+        }
+    }
+}
