@@ -4,43 +4,62 @@ pipeline {
     stages {
         stage('A') {
             steps {
-                echo 'hello world this is rakesh gowd'
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage A complete'
             }
         }
-
         stage('B') {
             steps {
-                echo 'this is 2nd stage'
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage B complete'
             }
         }
-
         stage('C') {
             steps {
-                echo 'Running stage C - check logs'
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage C complete'
             }
         }
-
         stage('D') {
             steps {
-                echo 'Running stage D - validating input'
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage D complete'
             }
         }
-
         stage('E') {
             steps {
-                echo 'Running stage E - building artifacts'
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage E complete'
             }
         }
-
         stage('F') {
             steps {
-                echo 'Running stage F - deploying application'
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage F complete'
             }
         }
-
         stage('G') {
             steps {
-                echo 'Running stage G - cleaning up'
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage G complete'
+            }
+        }
+        stage('H') {
+            steps {
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage H complete'
+            }
+        }
+        stage('I') {
+            steps {
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage I complete'
+            }
+        }
+        stage('J') {
+            steps {
+                bat 'timeout /t 5 /nobreak > NUL'
+                echo 'Stage J complete'
             }
         }
     }
