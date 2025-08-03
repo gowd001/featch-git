@@ -7,9 +7,40 @@ pipeline {
                 echo 'hello world this is rakesh gowd'
             }
         }
+
         stage('B') {
             steps {
                 echo 'this is 2nd stage'
+            }
+        }
+
+        stage('C') {
+            steps {
+                echo 'Running stage C - check logs'
+            }
+        }
+
+        stage('D') {
+            steps {
+                echo 'Running stage D - validating input'
+            }
+        }
+
+        stage('E') {
+            steps {
+                echo 'Running stage E - building artifacts'
+            }
+        }
+
+        stage('F') {
+            steps {
+                echo 'Running stage F - deploying application'
+            }
+        }
+
+        stage('G') {
+            steps {
+                echo 'Running stage G - cleaning up'
             }
         }
     }
