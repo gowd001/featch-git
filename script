@@ -4,61 +4,61 @@ pipeline {
     stages {
         stage('A') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage A complete'
             }
         }
         stage('B') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage B complete'
             }
         }
         stage('C') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage C complete'
             }
         }
         stage('D') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage D complete'
             }
         }
         stage('E') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage E complete'
             }
         }
         stage('F') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage F complete'
             }
         }
         stage('G') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage G complete'
             }
         }
         stage('H') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage H complete'
             }
         }
         stage('I') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage I complete'
             }
         }
         stage('J') {
             steps {
-                bat 'timeout /t 5 /nobreak > NUL'
+                bat '@timeout /t 5 /nobreak'
                 echo 'Stage J complete'
             }
         }
